@@ -1,0 +1,136 @@
+<h1 class="page-title">
+    New Booking
+</h1>
+<hr>
+<div class="row grid-margin">
+    <div class="col-lg-12">
+    	<div class="btn-group float-right">
+    		<a class="btn btn-success" [routerLink]="['/bookings']">
+                <i class="fa fa-chevron-circle-left"></i> Go Back
+            </a>
+    	</div>
+    </div>
+</div>
+<div class="row grid-margin">
+    <div class="col-lg-12 grid-margin grid-margin-lg-0">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Fill the following fields</h2>
+                <form class="forms-sample">
+                    <div class="form-group text-center" >
+                        <!-- <loading-spinner></loading-spinner> -->
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="checkin">CheckIn *</label>
+                            <input id="checkin" autocomplete="off" class="form-control" placeholder="Choose a date" >
+                            
+                        </div>
+                        <div class="form-group col">
+                            <label for="checkout">CheckOut *</label>
+                            <input id="checkout" autocomplete="off" class="form-control" placeholder="Choose a date" >
+                           
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="adults">Adults</label>
+                            <input type="number" step="1" min="0" class="form-control" id="adults" aria-describedby="adults_help" placeholder="Number of adults" autocomplete="off">
+                           
+                        </div>
+                        <div class="form-group col">
+                            <label for="children">Children</label>
+                            <input type="number" step="1" min="0" class="form-control" id="children" aria-describedby="children_help" placeholder="Number of children" autocomplete="off">
+                           
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="room">Room</label>
+                       
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="guest">Guest</label>
+                        <div class="form-row">
+                            <div class="col-8">
+                                <input type="text" class="form-control" id="guest" aria-describedby="guest_help" placeholder="Guest" autocomplete="off">
+                               
+                            </div>
+                            <div class="col-4">
+                                <a [routerLink]="['/guests/create']" class="btn btn-primary">
+                                    <i class="fa fa-plus-circle"></i> New Guest
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="type">Booking type</label>
+                            <div>
+                                <select class="form-control" id="type" aria-describedby="type_help">
+                                    <option>A/C</option>
+                                    <option >NON A/C</option>
+                                </select>
+                               
+                            </div>
+                        </div>
+                        <div class="form-group col">
+                            <label class="d-block" for="type">Booking is confirmed</label>
+                            <label class="form-check-label" for="confirmed">
+                                <input class="form-check-input" type="checkbox"  id="confirmed" aria-describedby="confirmed_help">
+                                Yes
+                            </label>
+                            <small id="confirmed_help" class="form-text text-muted text-success">Confirmed help</small>
+                        </div>
+                    </div>
+                  
+                    <hr>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <a [routerLink]="['/bookings']" class="btn btn-light">
+                        Cancel
+                    </a>
+                </form>
+               
+            </div>
+        </div>
+    </div>
+</div>
+<h1 class="page-title">Booking List</h1>
+<hr>
+<div class="row grid-margin">
+    <div class="col">
+        <form>
+            <input #search (keyup)="0" class="form-control" type="text" placeholder="Search">
+        </form>
+    </div>
+    <div class="col">
+    	<div class="btn-group float-right">
+    		<a class="btn btn-success" [routerLink]="['create']">
+                <i class="fa fa-plus-circle"></i> New Booking
+            </a>
+    	</div>
+    </div>
+</div>
+<div class="row grid-margin">
+    <div class="col-lg-12 grid-margin grid-margin-lg-0">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Bookings</h2>
+                <table class="table table-hover table-responsive-sm">
+                    <thead class="thead-light">
+                        <tr class="">
+                            <th>Details</th>
+                            <th>Guest</th>
+                            <th>Checkin</th>
+                            <th>Checkout</th>
+                            <th>Confirmed</th>
+                            <th width="1%">#</th>
+                        </tr>
+                    </thead>
+                  
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

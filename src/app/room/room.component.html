@@ -1,0 +1,113 @@
+<h1 class="page-title">
+    New Room
+</h1>
+<hr>
+<div class="row grid-margin">
+    <div class="col-lg-12">
+    	<div class="btn-group float-right">
+    		<a class="btn btn-success" >
+                <i class="fa fa-chevron-circle-left"></i> Go Back
+            </a>
+    	</div>
+    </div>
+</div>
+<div class="row grid-margin">
+    <div class="col-lg-12 grid-margin grid-margin-lg-0">
+        <div class="card">
+            <div class="card-body">
+               
+                <form class="forms-sample">
+                   
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="name">Room no :</label>
+                            <input class="form-control" id="name" placeholder="Room no" autocomplete="off">
+                            
+                        </div>
+                        <div class="form-group col">
+                            <label for="type">Room Type :</label>
+                            <select  class="form-control" id="type" >
+                                <option>A/C</option>
+                                <option>NON A/C</option>
+                               
+                            </select>
+                            
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="currency">Checkin :</label>
+                            <input class="form-control" id="currency" autocomplete="off">
+                           
+                        </div>
+                        <div class="form-group col">
+                            <label for="price_night">Checkout</label>
+                            <input class="form-control" id="price_night"  autocomplete="off">
+                           
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="max_guests">Amount</label>
+                            <input  class="form-control" id="max_guests"  autocomplete="off">
+                           
+                        </div>
+                        <div class="form-group col">
+                            <label class="d-block" for="type">Room is available</label>
+                            <label class="form-check-label" for="available">
+                                <input class="form-check-input" type="checkbox" >
+                                Yes
+                            </label>
+                           
+                        </div>
+                    </div>
+                    <hr>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <a class="btn btn-light">
+                        Cancel
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<h1 class="page-title">Room List</h1>
+<hr>
+<div class="row grid-margin">
+    <div class="col">
+        <form>
+            <input #search (keyup)="0" class="form-control" type="text" placeholder="Search">
+        </form>
+    </div>
+    <div class="col">
+    	<div class="btn-group float-right">
+    		<a class="btn btn-success" >
+                <i class="fa fa-plus-circle"></i> New Room
+            </a>
+    	</div>
+    </div>
+</div>
+<div class="row grid-margin">
+    <div class="col-lg-12 grid-margin grid-margin-lg-0">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Rooms</h2>
+                <table class="table table-hover table-responsive-sm">
+                    <thead class="thead-light">
+                        <tr class="">
+                            <th>Room no</th>
+                            <th>Room Type</th>
+                            <th>Checkin</th>
+                            <th>Checkout</th>
+                            <th>Amount</th>
+                            <th>Available</th>
+                            <th width="1%">#</th>
+                        </tr>
+                    </thead>
+                  
+                   
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

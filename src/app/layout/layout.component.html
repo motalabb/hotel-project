@@ -1,0 +1,65 @@
+<div class="container-fluid">
+    <header>
+        <div class="header">
+            <nav class="navbar navbar-light sticky-top bg-light flex-md-nowrap p-0 shadow">
+                <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Hotel Management System</a>
+                <ul class="navbar-nav px-3">
+                    <li class="nav-item text-nowrap">
+                        <a class="nav-link" href="#">Sign out</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="sidebar-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" routerLink="/">
+                                <span data-feather="home"></span>
+                                Dashboard <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/room">
+                                <span data-feather="file"></span>
+                                Room
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/booking">
+                                <span data-feather="file"></span>
+                                Booking
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/guest">
+                                <span data-feather="file"></span>
+                                Guest
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/payment">
+                                <span data-feather="file"></span>
+                                Payment
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <router-outlet></router-outlet>
+            </main>
+        </div>
+    </div>
+    
+</div>
+
+<footer class="footer mt-auto" style="padding-left: 12rem;">
+    <div class="container">
+        <span class="text-muted">Copy right by JEE/Round/44</span>
+    </div>
+</footer>
